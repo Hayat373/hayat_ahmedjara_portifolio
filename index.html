@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hayat Ahmedjara - AI/ML Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+</head>
+<body>
+    <!-- Grid Background -->
+    <div class="grid-bg"></div>
+    
+    <!-- Floating Orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">HAYAT</div>
+        <div class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="floating-tech" id="floatingTech"></div>
+        <div class="hero-content">
+            <h1>Hi, I'm <span>Hayat Ahmedjara</span></h1>
+            <p>AI/ML Engineer & Full-Stack Developer creating <span>intelligent solutions</span> for tomorrow's challenges</p>
+            <a href="#projects" class="btn">
+                <span>View My Work</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        
+        <!-- Artistic SVG Element -->
+        <svg class="hero-svg" width="100%" height="100%" viewBox="0 0 1000 500" preserveAspectRatio="none" style="position: absolute; top: 0; left: 0; z-index: 0; opacity: 0.3;">
+            <path d="M0,250 Q250,100 500,250 T1000,250" stroke="#00F0FF" stroke-width="2" fill="none" stroke-dasharray="5,5" />
+            <path d="M0,300 Q250,150 500,300 T1000,300" stroke="#FF2D75" stroke-width="1.5" fill="none" stroke-dasharray="3,3" />
+        </svg>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-header">
+            <div class="section-number">01</div>
+            <h2 class="section-title">My <span>Skills</span></h2>
+            <p class="section-subtitle">Technologies I've mastered to build innovative solutions</p>
+        </div>
+        <div class="skills-container" id="skillsContainer"></div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="section-header">
+            <div class="section-number">02</div>
+            <h2 class="section-title">My <span>Projects</span></h2>
+            <p class="section-subtitle">A showcase of my most recent and notable work</p>
+        </div>
+        <div class="projects-container" id="projectsContainer"></div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-header">
+            <div class="section-number">03</div>
+            <h2 class="section-title">Get In <span>Touch</span></h2>
+            <p class="section-subtitle">Feel free to reach out for collaborations or just to say hello</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <a href="mailto:hayahmam3@gmail.com">hayahmam3@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Phone</h3>
+                    <a href="tel:+251979029750">+251 97 902 9750</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fab fa-linkedin-in"></i>
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/hayat-ahmedjara" target="_blank">hayat-ahmedjara</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/Hayat373" target="_blank">Hayat373</a>
+                </div>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" placeholder="Enter your message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- AI Chatbot -->
+    <div class="chatbot-container">
+        <button class="chatbot-btn" id="chatbotBtn">
+            <i class="fas fa-robot"></i>
+        </button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <i class="fas fa-robot"></i>
+                <h3>AI Assistant</h3>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot-message">
+                    Hello! I'm Hayat's AI assistant. How can I help you today?
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbotInput" placeholder="Type your message...">
+                <button id="chatbotSend"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+    
+   <script src="script.js"></script>
+</body>
+</html>

@@ -1,4 +1,24 @@
- 
+         // Typewriter Effect for Hero Section
+        const typewriterText = "Hi, I'm Hayat Ahmedjara";
+        let i = 0;
+        const typewriterElement = document.getElementById('typewriter');
+        
+        function typeWriter() {
+            if (i < typewriterText.length) {
+                typewriterElement.innerHTML += typewriterText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            } else {
+                // Add blinking cursor after typing is done
+                typewriterElement.classList.add('typewriter');
+            }
+        }
+        
+        // Start typing effect when page loads
+        window.onload = function() {
+            setTimeout(typeWriter, 500);
+        };
+        
         // Floating Tech Icons Animation
         const techIcons = [
             { icon: "fab fa-python", size: "2rem", top: "20%", left: "15%" },

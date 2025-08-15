@@ -18,7 +18,7 @@
         window.onload = function() {
             setTimeout(typeWriter, 500);
         };
-        
+
         // Floating Tech Icons Animation
         const techIcons = [
             { icon: "fab fa-python", size: "2rem", top: "20%", left: "15%" },
@@ -52,10 +52,18 @@
             { name: "React", icon: "fab fa-react", level: 88 },
             { name: "Node.js", icon: "fab fa-node-js", level: 85 },
             { name: "PostgreSQL", icon: "fas fa-database", level: 75 },
+             { name: "SQL", icon: "fas fa-database", level: 80 },
+            { name: "SQLite", icon: "fas fa-database", level: 75 },
+            { name: "Laravel", icon: "fab fa-laravel", level: 70 },
+            { name: "HTML", icon: "fab fa-html5", level: 90 },
+            { name: "CSS", icon: "fab fa-css3-alt", level: 85 },
+            { name: "JavaScript", icon: "fab fa-js", level: 80 },
+            { name: "Bootstrap", icon: "fab fa-bootstrap", level: 75 },
+            { name: "Tailwind CSS", icon: "fab fa-tailwindcss", level: 70 },
+            { name: "Flask", icon: "fas fa-flask", level: 75 },
             { name: "Docker", icon: "fab fa-docker", level: 70 },
             { name: "Git", icon: "fab fa-git-alt", level: 80 },
             { name: "OpenCV", icon: "fas fa-eye", level: 75 },
-            { name: "Flutter", icon: "fas fa-mobile-alt", level: 65 },
             { name: "NestJS", icon: "fas fa-server", level: 78 },
             { name: "TypeScript", icon: "fas fa-code", level: 82 }
         ];

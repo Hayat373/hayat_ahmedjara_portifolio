@@ -93,7 +93,7 @@
             {
                 title: "Facial Recognition System",
                 description: "Real-time facial recognition application that captures webcam images and performs recognition, reducing manual verification tasks by 40 hours/month.",
-                image: "https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+                image: "https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
                 tags: ["Python", "OpenCV", "TensorFlow"],
                 github: "https://github.com/Hayat373/facial-recognition-system",
                 category: "ai"
@@ -101,7 +101,7 @@
             {
                 title: "Future Nest Time Capsule",
                 description: "Full-stack web app allowing users to create and unlock time-locked messages, using React for the frontend and NestJS with PostgreSQL for the backend.",
-                image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+                image: "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
                 tags: ["React", "NestJS", "PostgreSQL"],
                 github: "https://github.com/Hayat373/futureNest",
                 category: "fullstack"
@@ -119,14 +119,14 @@
                 description: "Static personal portfolio website showcasing my skills and projects with responsive design.",
                 image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
                 tags: ["HTML", "CSS", "JavaScript"],
-                github: "#",
+                github: "https://github.com/Hayat373/hayat_ahmedjata_portifolio",
                 category: "static"
             },
             {
                 title: "E-commerce Platform",
                 description: "Full-featured e-commerce platform with product management, cart functionality, and payment processing.",
                 image: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
-                tags: ["React", "Node.js", "MongoDB"],
+                tags: ["React", "Node.js", "SQL"],
                 github: "#",
                 category: "fullstack"
             }
@@ -183,7 +183,7 @@ const certificates = [
         title: "Cloud Basics Certification",
         issuer: "Cloud Computing Association",
         date: "August 2025",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+         image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
     },
     {
         title: "VEX Robotics Competition Certification",
@@ -194,7 +194,7 @@ const certificates = [
     {
         title: "Volunteering Certificate",
         issuer: "Community Service Organization",
-        date: "December 2024",
+        date: "Mach 2025",
         image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
     }
 ];

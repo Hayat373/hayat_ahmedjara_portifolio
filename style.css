@@ -298,7 +298,7 @@
             z-index: -1;
             user-select: none;
         }
-        
+
         /* Skills Section */
         .skills-container {
             display: grid;
@@ -378,7 +378,30 @@
             transition: width 1s ease-out;
         }
 
-        /* Projects Section */
+      /* Projects Section */
+        .projects-tabs {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .project-tab {
+            padding: 10px 25px;
+            background: rgba(0, 240, 255, 0.1);
+            color: var(--light);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .project-tab.active {
+            background: var(--secondary);
+            color: var(--dark);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+        }
+
         .projects-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -496,6 +519,7 @@
         .project-link:hover i {
             transform: translateX(5px);
         }
+        
 
         /* Contact Section */
         .contact-container {

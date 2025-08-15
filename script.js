@@ -88,36 +88,60 @@
             });
         }
 
-        // Projects Data
+        // Projects Data (categorized)
         const projects = [
             {
                 title: "Facial Recognition System",
                 description: "Real-time facial recognition application that captures webcam images and performs recognition, reducing manual verification tasks by 40 hours/month.",
                 image: "https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
                 tags: ["Python", "OpenCV", "TensorFlow"],
-                github: "https://github.com/Hayat373/facial-recognition-system"
+                github: "https://github.com/Hayat373/facial-recognition-system",
+                category: "ai"
             },
             {
                 title: "Future Nest Time Capsule",
                 description: "Full-stack web app allowing users to create and unlock time-locked messages, using React for the frontend and NestJS with PostgreSQL for the backend.",
                 image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
                 tags: ["React", "NestJS", "PostgreSQL"],
-                github: "https://github.com/Hayat373/futureNest"
+                github: "https://github.com/Hayat373/futureNest",
+                category: "fullstack"
             },
             {
                 title: "Study Buddy AI",
                 description: "AI-powered flashcard generator with face recognition login and real-time group chat for sharing flashcards.",
                 image: "https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
                 tags: ["Python", "Laravel", "TensorFlow"],
-                github: "https://github.com/Hayat373/Study_Buddy"
+                github: "https://github.com/Hayat373/Study_Buddy",
+                category: "ai"
+            },
+            {
+                title: "Portfolio Website",
+                description: "Static personal portfolio website showcasing my skills and projects with responsive design.",
+                image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+                tags: ["HTML", "CSS", "JavaScript"],
+                github: "#",
+                category: "static"
+            },
+            {
+                title: "E-commerce Platform",
+                description: "Full-featured e-commerce platform with product management, cart functionality, and payment processing.",
+                image: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80",
+                tags: ["React", "Node.js", "MongoDB"],
+                github: "#",
+                category: "fullstack"
             }
         ];
 
         // Render Projects
-        function renderProjects() {
+        function renderProjects(filter = 'all') {
             const container = document.getElementById('projectsContainer');
+            container.innerHTML = '';
             
-            projects.forEach(project => {
+            const filteredProjects = filter === 'all' 
+                ? projects 
+                : projects.filter(project => project.category === filter);
+            
+            filteredProjects.forEach(project => {
                 const projectCard = document.createElement('div');
                 projectCard.className = 'project-card';
                 projectCard.innerHTML = `
@@ -141,6 +165,37 @@
             });
         }
 
+        // Project Tab Filtering
+        document.querySelectorAll('.project-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.project-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                const filter = this.getAttribute('data-filter');
+                renderProjects(filter);
+            });
+        });
+
+        // Certificates Data
+        const certificates = [
+            {
+                title: "Cloud Basics Certification",
+                issuer: "Cloud Computing Association",
+                date: "August 2025",
+                image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                title: "VEX Robotics Competition Certification",
+                issuer: "Robotics Education & Competition Foundation",
+                date: "March 2025",
+                image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                title: "Volunteering Certificate",
+                issuer: "Community Service Organization",
+                date: "December 2024",
+                image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+            }
+        ];
         // AI Chatbot Functionality
         const chatbotBtn = document.getElementById('chatbotBtn');
         const chatbotWindow = document.getElementById('chatbotWindow');

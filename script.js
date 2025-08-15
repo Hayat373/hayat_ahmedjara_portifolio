@@ -175,27 +175,50 @@
             });
         });
 
-        // Certificates Data
-        const certificates = [
-            {
-                title: "Cloud Basics Certification",
-                issuer: "Cloud Computing Association",
-                date: "August 2025",
-                image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
-            },
-            {
-                title: "VEX Robotics Competition Certification",
-                issuer: "Robotics Education & Competition Foundation",
-                date: "March 2025",
-                image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
-            },
-            {
-                title: "Volunteering Certificate",
-                issuer: "Community Service Organization",
-                date: "December 2024",
-                image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
-            }
-        ];
+      
+
+       // Updated Certificates Data with working image URLs
+const certificates = [
+    {
+        title: "Cloud Basics Certification",
+        issuer: "Cloud Computing Association",
+        date: "August 2025",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        title: "VEX Robotics Competition Certification",
+        issuer: "Robotics Education & Competition Foundation",
+        date: "March 2025",
+        image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        title: "Volunteering Certificate",
+        issuer: "Community Service Organization",
+        date: "December 2024",
+        image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+    }
+];
+
+// Updated Render Certificates function
+function renderCertificates() {
+    const container = document.getElementById('certificatesContainer');
+    container.innerHTML = ''; // Clear existing content
+    
+    certificates.forEach(cert => {
+        const certCard = document.createElement('div');
+        certCard.className = 'certificate-card';
+        certCard.innerHTML = `
+            <img src="${cert.image}" alt="${cert.title}" class="certificate-image" 
+                 onerror="this.src='https://via.placeholder.com/600x400?text=Certificate+Image'">
+            <h3 class="certificate-title">${cert.title}</h3>
+            <p class="certificate-issuer">${cert.issuer}</p>
+            <p class="certificate-date">${cert.date}</p>
+        `;
+        container.appendChild(certCard);
+    });
+}
+
+
         // AI Chatbot Functionality
         const chatbotBtn = document.getElementById('chatbotBtn');
         const chatbotWindow = document.getElementById('chatbotWindow');
@@ -362,5 +385,6 @@
             createFloatingTech();
             renderSkills();
             renderProjects();
+            renderCertificates()
         });
    

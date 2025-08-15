@@ -1,5 +1,6 @@
 
         /* CSS Reset & Variables */
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
         :root {
             --primary: #0A192F;
             --secondary: #00F0FF;
@@ -15,8 +16,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Rajdhani', 'Segoe UI', sans-serif;
-        }
+            font-family: 'Rajdhani', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;        }
 
         body {
             background-color: var(--dark);
@@ -519,7 +519,56 @@
         .project-link:hover i {
             transform: translateX(5px);
         }
-        
+
+
+       /* <!-- In the CSS section --> */
+.certificates-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px; /* Added margin */
+}
+
+.certificate-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 240, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    transition: all 0.3s;
+    height: 100%; /* Ensure full height */
+    display: flex;
+    flex-direction: column;
+}
+
+.certificate-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Changed from contain to cover */
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: #112240; /* Fallback background */
+}
+
+.certificate-title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--secondary);
+}
+
+.certificate-issuer {
+    font-size: 0.9rem;
+    color: var(--light);
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+.certificate-date {
+    font-size: 0.8rem;
+    color: var(--secondary);
+    font-weight: 500;
+    margin-top: auto; /* Pushes date to bottom */
+}
+
 
         /* Contact Section */
         .contact-container {
@@ -835,7 +884,8 @@
             }
             
             .skills-container,
-            .projects-container {
+            .projects-container,
+            .certificates-container  {
                 grid-template-columns: 1fr;
             }
             

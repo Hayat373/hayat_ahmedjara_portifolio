@@ -336,12 +336,31 @@ function renderCertificates() {
 
         // Contact form submission
         const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your message! Hayat will get back to you soon.');
-            contactForm.reset();
-        });
+        contactForm.addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent default form submission
 
+    // Create FormData object from the form
+    const formData = new FormData(contactForm);
+
+    // Send the form data to Web3Forms
+    fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('Thank you! Your message has been sent.');
+            contactForm.reset(); // Reset the form fields
+        } else {
+            alert('There was an error sending your message. Please try again.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('There was an error sending your message. Please try again.');
+    });
+});
         // Smooth scrolling for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {

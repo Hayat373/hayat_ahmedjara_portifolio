@@ -8,6 +8,8 @@ This is a personal portfolio website showcasing my skills, projects, and a conta
 - **Projects Section**: Displays a selection of projects with descriptions and links.
 - **Contact Form**: Allows users to reach out directly for inquiries or collaborations.
 
+  
+
 ## Technologies Used
 - **Frontend**: HTML, CSS, JavaScript, React
 - **Hosting**: GitHub Pages
